@@ -16,11 +16,21 @@ layout: default
 <tr><th>Na znamení</th><td>{% if page.details.request %}ano{% else %}ne{% endif %}</td></tr>
 <tr><th>Počet kolejí</th><td>{{ page.details.tracks }}</td></tr>
 <tr><th>Nadmořská výška</th><td>{{ page.details.altitude }} m n. m.</td></tr>
+<tr><th>GPS souřadnice</th><td>{{ page.details.coordinatesn }} s. š.</td></tr>
+<tr><th></th><td>{{ page.details.coordinatese }} v. d.</td></tr>
 </tbody>
 </table>
 
 <div style="clear: both"></div>
 
 {{ page.content }}
+
+<div id="mapa" style="width:600px; height:400px;"></div>
+	<script type="text/javascript">
+		var stred = SMap.Coords.fromWGS84({{ page.details.coordinatese }}, {{ page.details.coordinatesn }});
+		var mapa = new SMap(JAK.gel("mapa"), stred, 16);
+		mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+		mapa.addDefaultControls();	      	      
+	</script>
 
 {% endblock %}

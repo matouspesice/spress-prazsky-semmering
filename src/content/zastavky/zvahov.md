@@ -5,6 +5,8 @@ details:
   request: true
   tracks: 2
   altitude: 255
+  coordinatesn: 50.045278
+  coordinatese: 14.400833
   picture: zvahov.jpg
   picture_cc: 'Honza Groh, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>'
   picture_url: "https://commons.wikimedia.org/wiki/File:Praha-%C5%BDvahov,_p%C5%99%C3%ADst%C5%99e%C5%A1ek.jpg"
